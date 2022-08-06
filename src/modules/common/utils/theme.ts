@@ -6,14 +6,16 @@ export const spacing = {
   m: 16,
   l: 32,
   xl: 64,
+  xxl: 128,
 };
 
 export const colors = {
   title: '#1D1C1D',
   text: '#444444',
-  while: '#FFFFFF',
+  white: '#FFFFFF',
   background: '#f8f6f4',
   primary: '#ed553b',
+  primaryLight: 'rgba(234, 90, 75, 0.25)',
   secondary: '#fddb4f',
 };
 
@@ -23,4 +25,14 @@ export const sizes = {
   m: RFValue(20),
   l: RFValue(25),
   xl: RFValue(35),
+  xxl: RFValue(70),
+};
+
+export const fonts = {
+  light: 'Poppins-Light',
+  regular: 'Poppins-Regular',
+  medium: 'Poppins-Medium',
+  semiBold: 'Poppins-SemiBold',
+  bold: 'Poppins-Bold',
+  extraBold: 'Poppins-ExtraBold',
 };

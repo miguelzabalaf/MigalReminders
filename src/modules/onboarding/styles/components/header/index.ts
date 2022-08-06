@@ -21,6 +21,7 @@ export const headerStyles = StyleSheet.create({
   containerRightText: {
     color: colors.text,
     fontSize: sizes.s,
-    fontWeight: '400',
+    fontFamily: 'Poppins-Regular',
+    lineHeight: sizes.m,
   },
 });
