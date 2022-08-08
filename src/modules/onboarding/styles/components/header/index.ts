@@ -19,7 +19,7 @@ export const headerStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   containerRightText: {
-    color: colors.text,
+    color: colors.textMuted,
     fontSize: sizes.s,
     fontFamily: 'Poppins-Regular',
     lineHeight: sizes.m,

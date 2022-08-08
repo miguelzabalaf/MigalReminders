@@ -8,18 +8,25 @@ import { Button } from '../../../common/components/button';
 interface ContentProps {
   title: string;
   subTitle: string;
+  onPressButton: () => void;
 }
 
-export const Content: React.FC<ContentProps> = ({ title, subTitle }) => {
+export const Content: React.FC<ContentProps> = ({
+  title,
+  subTitle,
+  onPressButton,
+}) => {
   return (
     <View style={contentStyles.container}>
       <View style={contentStyles.containerTop}>
-        <ImageHero width={300} height={162} color={colors.primaryLight} />
+        <ImageHero width={300} height={162} color={colors.textMuted} />
         <Text style={contentStyles.title}>{title}</Text>
         <Text style={contentStyles.subTitle}>{subTitle}</Text>
       </View>
       <View style={contentStyles.containerBottom}>
-        <Button>HI, MIGAL</Button>
+        <Button onPress={onPressButton} contentType="text">
+          HI, MIGAL
+        </Button>
       </View>
     </View>
   );

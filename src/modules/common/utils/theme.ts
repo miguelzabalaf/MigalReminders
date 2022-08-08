@@ -11,7 +11,8 @@ export const spacing = {
 
 export const colors = {
   title: '#1D1C1D',
-  text: '#444444',
+  text: '#333333',
+  textMuted: '#999999',
   white: '#FFFFFF',
   background: '#f8f6f4',
   primary: '#ed553b',

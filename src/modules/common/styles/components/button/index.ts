@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { isIOS } from '../../../helpers/quickFunctions';
 import { colors, fonts, sizes, spacing } from '../../../utils/theme';
 
 export const buttonStyles = StyleSheet.create({
@@ -9,7 +10,7 @@ export const buttonStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: colors.primary,
-    borderRadius: 25,
+    borderRadius: isIOS() ? 25 : 10,
   },
   text: {
     fontFamily: fonts.medium,
