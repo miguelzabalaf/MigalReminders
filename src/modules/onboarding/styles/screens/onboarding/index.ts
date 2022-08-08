@@ -8,5 +8,6 @@ export const onboardingStyles = StyleSheet.create({
     backgroundColor: colors.background,
     paddingHorizontal: spacing.m,
     paddingVertical: isIOS() ? spacing.xl : spacing.l,
+    justifyContent: 'space-between',
   },
 });

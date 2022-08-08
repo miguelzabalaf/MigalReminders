@@ -19,8 +19,9 @@ export const headerStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   containerRightText: {
-    color: colors.text,
+    color: colors.textMuted,
     fontSize: sizes.s,
-    fontWeight: '400',
+    fontFamily: 'Poppins-Regular',
+    lineHeight: sizes.m,
   },
 });

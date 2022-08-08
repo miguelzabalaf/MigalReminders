@@ -14,6 +14,13 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-MigalReminders-MigalRemindersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MigalReminders-MigalRemindersTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A662DDF6289E216200B8347E /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDEF289E216200B8347E /* Poppins-Bold.ttf */; };
+		A662DDF7289E216200B8347E /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF0289E216200B8347E /* Poppins-ExtraBold.ttf */; };
+		A662DDF8289E216200B8347E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF1289E216200B8347E /* Poppins-Medium.ttf */; };
+		A662DDF9289E216200B8347E /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF2289E216200B8347E /* Poppins-Black.ttf */; };
+		A662DDFA289E216200B8347E /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF3289E216200B8347E /* Poppins-SemiBold.ttf */; };
+		A662DDFB289E216200B8347E /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF4289E216200B8347E /* Poppins-Light.ttf */; };
+		A662DDFC289E216200B8347E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF5289E216200B8347E /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,13 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-MigalReminders.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigalReminders.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MigalReminders/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-MigalReminders-MigalRemindersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigalReminders-MigalRemindersTests.release.xcconfig"; path = "Target Support Files/Pods-MigalReminders-MigalRemindersTests/Pods-MigalReminders-MigalRemindersTests.release.xcconfig"; sourceTree = "<group>"; };
+		A662DDEF289E216200B8347E /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		A662DDF0289E216200B8347E /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "../../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A662DDF1289E216200B8347E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		A662DDF2289E216200B8347E /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Black.ttf"; path = "../../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		A662DDF3289E216200B8347E /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		A662DDF4289E216200B8347E /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		A662DDF5289E216200B8347E /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -116,6 +130,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				A662DDEE289E211100B8347E /* Resources */,
 				13B07FAE1A68108700A75B9A /* MigalReminders */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MigalRemindersTests */,
@@ -135,6 +150,20 @@
 				00E356EE1AD99517003FC87E /* MigalRemindersTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A662DDEE289E211100B8347E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A662DDF2289E216200B8347E /* Poppins-Black.ttf */,
+				A662DDEF289E216200B8347E /* Poppins-Bold.ttf */,
+				A662DDF0289E216200B8347E /* Poppins-ExtraBold.ttf */,
+				A662DDF4289E216200B8347E /* Poppins-Light.ttf */,
+				A662DDF1289E216200B8347E /* Poppins-Medium.ttf */,
+				A662DDF5289E216200B8347E /* Poppins-Regular.ttf */,
+				A662DDF3289E216200B8347E /* Poppins-SemiBold.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -242,8 +271,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A662DDF9289E216200B8347E /* Poppins-Black.ttf in Resources */,
+				A662DDFA289E216200B8347E /* Poppins-SemiBold.ttf in Resources */,
+				A662DDF7289E216200B8347E /* Poppins-ExtraBold.ttf in Resources */,
+				A662DDFC289E216200B8347E /* Poppins-Regular.ttf in Resources */,
+				A662DDFB289E216200B8347E /* Poppins-Light.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				A662DDF6289E216200B8347E /* Poppins-Bold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A662DDF8289E216200B8347E /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +521,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MigalReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MigalReminders;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -511,7 +551,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MigalReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -524,6 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MigalReminders;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
