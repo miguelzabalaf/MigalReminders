@@ -29,13 +29,14 @@ export const Button: React.FC<PropsWithChildren<ButtonProps>> = props => {
   const getContainerStyles: ButtonProps['customStyle'] =
     props.customStyle ?? buttonStyles.containerButton;
 
-  const getDisableStyles = props.disabled ? { opacity: 0.5 } : { opacity: 1 };
+  const getDisableStyles: StyleProp<ViewStyle> = {
+    opacity: props.disabled ? 0.5 : 1,
+  };
 
   return (
     <Animated.View
       style={[{ transform: [{ scale: scaleValue }] }, getDisableStyles]}>
       <TouchableOpacity
-        disabled={props.disabled}
         style={getContainerStyles}
         onPressIn={() => {
           handleScale();

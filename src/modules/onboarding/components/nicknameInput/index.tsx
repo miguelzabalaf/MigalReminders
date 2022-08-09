@@ -33,6 +33,11 @@ export const NicknameInput: React.FC<NicknameInputProps> = ({
       <TextInput
         style={inputNameStyles.textInput}
         onChangeText={event => {
+          activateLayoutAnimation({
+            duration: 250,
+            type: 'easeInEaseOut',
+            creationProp: 'scaleXY',
+          });
           onChangeNickname(event);
           handleScale();
         }}
@@ -59,7 +64,7 @@ export const NicknameInput: React.FC<NicknameInputProps> = ({
         placeholderTextColor={colors.textMuted}
         maxLength={NICKNAME_MAX_LENGHT}
       />
-      {focusOnNicknameInput && (
+      {focusOnNicknameInput && nickname && (
         <Animated.View
           style={[
             { transform: [{ scale: scaleValue }] },
