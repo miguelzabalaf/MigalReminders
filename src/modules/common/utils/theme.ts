@@ -15,9 +15,14 @@ export const colors = {
   textMuted: '#999999',
   white: '#FFFFFF',
   background: '#f8f6f4',
-  primary: '#ed553b',
-  primaryLight: 'rgba(234, 90, 75, 0.25)',
-  secondary: '#fddb4f',
+  primary: '#111111',
+  primaryLight: 'rgba(11, 11, 11, 0.25)',
+  color1: '#EA5A4B',
+  color2: '#09A6FF',
+  color3: '#00C37D',
+  color4: '#9447C3',
+  color5: '#124E67',
+  color6: '#2D2D2D',
 };
 
 export const sizes = {

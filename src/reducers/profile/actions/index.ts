@@ -1,5 +1,9 @@
 import { useDispatch } from 'react-redux';
-import { PROFILE_SET_NICKNAME } from '../constants';
+import { IColorListItem } from '../../../modules/common/constants';
+import {
+  PROFILE_SET_NICKNAME,
+  PROFILE_SET_COLOR_PREFERENCE,
+} from '../constants';
 
 export const useProfileActions = () => {
   const dispatch = useDispatch();
@@ -11,7 +15,15 @@ export const useProfileActions = () => {
     });
   };
 
+  const actSetColorPreference = (colorListItem: IColorListItem | null) => {
+    dispatch({
+      type: PROFILE_SET_COLOR_PREFERENCE,
+      payload: colorListItem,
+    });
+  };
+
   return {
     actSetNickname,
+    actSetColorPreference,
   };
 };

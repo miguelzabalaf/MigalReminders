@@ -18,7 +18,6 @@ export const inputNameStyles = StyleSheet.create({
     },
     shadowOpacity: 0.05,
     shadowRadius: 5,
-
     elevation: 5,
   },
   textInput: {
