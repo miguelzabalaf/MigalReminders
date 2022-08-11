@@ -8,19 +8,19 @@ import {
   ONBOARDING_SET_FIRST_SESSION_DATE,
 } from './constants';
 
-interface IonboardingState {
+export interface IOnboardingState {
   firstSessionDate: number | null;
   onboardingCompleate: boolean;
 }
 
-const onboardingInitialState: IonboardingState = {
+const onboardingInitialState: IOnboardingState = {
   firstSessionDate: null,
   onboardingCompleate: false,
 };
 
 const onboardingHandler = {
   [ONBOARDING_SET_FIRST_SESSION_DATE](
-    state: IonboardingState,
+    state: IOnboardingState,
     action: actionProps,
   ) {
     const firstSessionDate = action.payload;
@@ -30,7 +30,7 @@ const onboardingHandler = {
     };
   },
   [ONBOARDING_CHANGE_ONBOARDING_COMPLETE](
-    state: IonboardingState,
+    state: IOnboardingState,
     action: actionProps,
   ) {
     const onboardingCompleate = action.payload;
