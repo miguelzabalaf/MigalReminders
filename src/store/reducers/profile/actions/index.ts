@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { IColorListItem } from '../../../modules/common/constants';
+import { IColorListItem } from '../../../../modules/common/constants';
 import {
   PROFILE_SET_NICKNAME,
   PROFILE_SET_COLOR_PREFERENCE,

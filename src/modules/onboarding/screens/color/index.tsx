@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { useSelector } from 'react-redux';
-import { useProfileSelectors } from '../../../../reducers/profile/selectors';
+import { useProfileSelectors } from '../../../../store/reducers/profile/selectors';
 import { activateLayoutAnimation } from '../../../common/animations/layaoutAnimation';
 import { IconArrowLeft } from '../../../common/assets/icons/arrowLeft';
 import { IconCheck } from '../../../common/assets/icons/check';

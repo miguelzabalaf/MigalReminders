@@ -1,8 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useProfileActions } from '../../../../reducers/profile/actions';
-import { useProfileSelectors } from '../../../../reducers/profile/selectors';
+import { useProfileActions } from '../../../../store/reducers/profile/actions';
+import { useProfileSelectors } from '../../../../store/reducers/profile/selectors';
 import { COLOR_SCREEN } from '../../../common/constants';
 import { NICKNAME_MAX_LENGHT, NICKNAME_MIN_LENGHT } from '../../constants';
 

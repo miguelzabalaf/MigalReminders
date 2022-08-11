@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useOnboardingActions } from '../../../../reducers/onboarding/actions';
-import { useProfileActions } from '../../../../reducers/profile/actions';
-import { useProfileSelectors } from '../../../../reducers/profile/selectors';
+import { useOnboardingActions } from '../../../../store/reducers/onboarding/actions';
+import { useProfileActions } from '../../../../store/reducers/profile/actions';
+import { useProfileSelectors } from '../../../../store/reducers/profile/selectors';
 import { activateLayoutAnimation } from '../../../common/animations/layaoutAnimation';
 import { useReboundAnimation } from '../../../common/animations/rebound';
 import { IColorListItem } from '../../../common/constants/index';

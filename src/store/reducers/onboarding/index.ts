@@ -1,8 +1,8 @@
-import { COMMON_RESET_REDUX_STORE_DATA } from '../../modules/common/constants';
+import { COMMON_RESET_REDUX_STORE_DATA } from '../../../modules/common/constants';
 import {
   actionProps,
   createReducer,
-} from '../../modules/common/helpers/createReducer';
+} from '../../../modules/common/helpers/createReducer';
 import {
   ONBOARDING_CHANGE_ONBOARDING_COMPLETE,
   ONBOARDING_SET_FIRST_SESSION_DATE,

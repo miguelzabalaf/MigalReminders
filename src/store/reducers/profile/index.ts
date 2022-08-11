@@ -1,11 +1,11 @@
 import {
   COMMON_RESET_REDUX_STORE_DATA,
   IColorListItem,
-} from '../../modules/common/constants';
+} from '../../../modules/common/constants';
 import {
   actionProps,
   createReducer,
-} from '../../modules/common/helpers/createReducer';
+} from '../../../modules/common/helpers/createReducer';
 import {
   PROFILE_SET_NICKNAME,
   PROFILE_SET_COLOR_PREFERENCE,

@@ -1,5 +1,5 @@
-import { IOnboardingState } from '../../../reducers/onboarding';
-import { IProfileState } from '../../../reducers/profile';
+import { IOnboardingState } from '../../../store/reducers/onboarding';
+import { IProfileState } from '../../../store/reducers/profile';
 
 export interface actionProps {
   type: string;

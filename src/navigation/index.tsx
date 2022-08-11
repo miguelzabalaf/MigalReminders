@@ -2,7 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { OnboardingStack } from './stacks/onboardingStack';
 import { ONBOARDING_STACK, APP_STACK } from '../modules/common/constants/index';
-import { useOnboardingSelectors } from '../reducers/onboarding/selectors';
+import { useOnboardingSelectors } from '../store/reducers/onboarding/selectors';
 import { useSelector } from 'react-redux';
 import { AppStack } from './stacks/appStack';
 
