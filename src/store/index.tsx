@@ -13,7 +13,7 @@ export const useStore = () => {
   const persistConfig = {
     key: 'root',
     storage: AsyncStorage,
-    whitelist: ['profile'],
+    whitelist: ['onboarding', 'profile'],
   };
 
   const persistReduce = persistReducer(persistConfig, reducers);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useOnboardingActions } from '../../../../reducers/onboarding/actions';
 import { useProfileActions } from '../../../../reducers/profile/actions';
 import { useProfileSelectors } from '../../../../reducers/profile/selectors';
 import { activateLayoutAnimation } from '../../../common/animations/layaoutAnimation';
@@ -13,6 +14,8 @@ export const useColor = () => {
 
   // Actions
   const { actSetColorPreference } = useProfileActions();
+  const { actSetFirstSessionDate, actChangeOnboardingComplete } =
+    useOnboardingActions();
 
   // States
   const [colorSelected, setColorSelected] =
@@ -32,6 +35,10 @@ export const useColor = () => {
       creationProp: 'scaleXY',
       type: 'easeInEaseOut',
     });
+    setTimeout(() => {
+      actSetFirstSessionDate(new Date().getTime());
+      actChangeOnboardingComplete(true);
+    }, 1500);
   });
 
   const onSaveColorPreference = () => {
