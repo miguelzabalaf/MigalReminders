@@ -51,8 +51,6 @@ export const colorStyles = StyleSheet.create({
   },
   containerGlobe: {
     position: 'absolute',
-    top: 0,
-    left: 0,
     width: 1,
     height: 1,
     borderRadius: 10000,

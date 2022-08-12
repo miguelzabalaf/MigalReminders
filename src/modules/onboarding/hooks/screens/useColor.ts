@@ -21,11 +21,15 @@ export const useColor = () => {
   const [colorSelected, setColorSelected] =
     React.useState<IColorListItem | null>(colorPreference);
   const [showCompleteIcon, setShowCompleteIcon] = React.useState(false);
+  const [positionColor, setPositionColor] = React.useState({
+    x: 0,
+    y: 0,
+  });
 
   const configScale = {
-    scale1: { toValue: 1600, duration: 300 },
-    scale2: { toValue: 1600, duration: 0 },
-    scale3: { toValue: 2000, duration: 600 },
+    scale1: { toValue: 1000, duration: 500 },
+    scale2: { toValue: 1500, duration: 100 },
+    scale3: { toValue: 2000, duration: 50 },
   };
 
   const { scaleValue, handleScale } = useReboundAnimation(configScale, () => {
@@ -38,7 +42,7 @@ export const useColor = () => {
     setTimeout(() => {
       actSetFirstSessionDate(new Date().getTime());
       actChangeOnboardingComplete(true);
-    }, 1500);
+    }, 1000);
   });
 
   const onSaveColorPreference = () => {
@@ -58,5 +62,7 @@ export const useColor = () => {
     handleSelectColor,
     scaleValue,
     showCompleteIcon,
+    positionColor,
+    setPositionColor,
   };
 };

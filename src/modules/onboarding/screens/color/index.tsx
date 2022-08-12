@@ -35,6 +35,8 @@ export const ColorScreen: React.FC = () => {
     onSaveColorPreference,
     scaleValue,
     showCompleteIcon,
+    positionColor,
+    setPositionColor,
   } = useColor();
   const { getColorPreferenceSelector } = useProfileSelectors();
   const colorPreference = useSelector(getColorPreferenceSelector);
@@ -58,7 +60,11 @@ export const ColorScreen: React.FC = () => {
               renderItem={({ item }) => (
                 <TouchableOpacity
                   activeOpacity={0.9}
-                  onPress={() => {
+                  onPress={ev => {
+                    setPositionColor({
+                      x: ev.nativeEvent.pageX,
+                      y: ev.nativeEvent.pageY,
+                    });
                     activateLayoutAnimation({
                       duration: 300,
                       type: 'easeInEaseOut',
@@ -68,10 +74,11 @@ export const ColorScreen: React.FC = () => {
                   }}
                   style={colorStyles.containerListItem}>
                   <ColorOption
-                    selected={colorSelected?.id === item.id}
+                    showChildren={colorSelected?.id === item.id}
                     width={85}
-                    color={item.color}
-                  />
+                    color={item.color}>
+                    <IconCheck width={25} height={25} color={colors.white} />
+                  </ColorOption>
                 </TouchableOpacity>
               )}
               numColumns={3}
@@ -92,6 +99,8 @@ export const ColorScreen: React.FC = () => {
           {
             transform: [{ scale: scaleValue }],
             backgroundColor: colorPreference?.color,
+            top: positionColor.y,
+            left: positionColor.x,
           },
           colorStyles.containerGlobe,
         ]}

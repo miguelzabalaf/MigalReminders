@@ -21,9 +21,9 @@ export const Text: React.FC<PropsWithChildren<TextComponentProps>> = props => {
   return (
     <TextComponent
       style={[
+        props.customStyle,
         getStylesByType,
         { color: props.color ?? colors.text },
-        props.customStyle,
       ]}>
       {props.children}
     </TextComponent>

@@ -11,6 +11,8 @@ export const APP_STACK = 'appStack';
 export const ONBOARDING_SCREEN = 'OnboardingScreen';
 export const HELLO_SCREEN = 'HelloScreen';
 export const COLOR_SCREEN = 'ColorScreen';
+export const HOME_SCREEN = 'HomeScreen';
+export const PROFILE_SCREEN = 'ProfileScreen';
 
 // Data
 export interface IColorListItem {
