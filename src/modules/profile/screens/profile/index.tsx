@@ -8,7 +8,7 @@ import { Header } from '../../../common/components/header';
 import { LayoutContainer } from '../../../common/components/layoutContainer';
 import { LayoutContent } from '../../../common/components/layoutContent';
 import { Text } from '../../../common/components/text';
-import { colors, spacing } from '../../../common/utils/theme';
+import { colors } from '../../../common/utils/theme';
 import { actResetStoreData } from '../../../../store/reducers';
 import { profileStyles } from '../../styles/screens/profile';
 
