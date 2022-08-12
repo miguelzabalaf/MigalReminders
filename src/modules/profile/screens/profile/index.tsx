@@ -8,7 +8,7 @@ import { Header } from '../../../common/components/header';
 import { LayoutContainer } from '../../../common/components/layoutContainer';
 import { LayoutContent } from '../../../common/components/layoutContent';
 import { Text } from '../../../common/components/text';
-import { colors } from '../../../common/utils/theme';
+import { colors, spacing } from '../../../common/utils/theme';
 import { actResetStoreData } from '../../../../store/reducers';
 import { profileStyles } from '../../styles/screens/profile';
 
@@ -21,6 +21,7 @@ export const ProfileScreen: React.FC = () => {
     containerUserInfo,
     containerUserInfoLabels,
     containerBottom,
+    customButtonStyle,
   } = profileStyles;
   return (
     <LayoutContainer>
@@ -44,9 +45,12 @@ export const ProfileScreen: React.FC = () => {
         </View>
         <View style={containerBottom}>
           <Button
-            contentType="text"
+            contentType="icon"
+            customStyle={customButtonStyle}
             onPress={() => actResetStoreData(dispatch)}>
-            Clear data
+            <Text type="text" color={colors.textMuted}>
+              Clear Data
+            </Text>
           </Button>
         </View>
       </LayoutContent>

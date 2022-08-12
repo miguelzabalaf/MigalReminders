@@ -18,5 +18,10 @@ export const profileStyles = StyleSheet.create({
   containerBottom: {
     marginBottom: spacing.m,
     paddingHorizontal: spacing.l,
+    alignItems: 'center',
+  },
+  customButtonStyle: {
+    backgroundColor: 'transparent',
+    padding: spacing.m,
   },
 });
