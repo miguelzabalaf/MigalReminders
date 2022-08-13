@@ -81,7 +81,7 @@ export const ColorScreen: React.FC = () => {
                   </ColorOption>
                 </TouchableOpacity>
               )}
-              numColumns={3}
+              numColumns={2}
             />
           </View>
           <View style={colorStyles.contentBottomContinueButton}>

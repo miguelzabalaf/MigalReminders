@@ -24,14 +24,14 @@ export const colorStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   list: {
-    maxHeight: 200,
+    maxHeight: 375,
     margin: 0,
   },
   containerListItem: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
+    marginBottom: 50,
   },
   contentBottomContinueButton: {
     width: 250,

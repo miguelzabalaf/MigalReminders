@@ -21,6 +21,7 @@
 		A662DDFA289E216200B8347E /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF3289E216200B8347E /* Poppins-SemiBold.ttf */; };
 		A662DDFB289E216200B8347E /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF4289E216200B8347E /* Poppins-Light.ttf */; };
 		A662DDFC289E216200B8347E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A662DDF5289E216200B8347E /* Poppins-Regular.ttf */; };
+		A684DDDA28A772A90061E5E3 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A684DDD928A772A90061E5E3 /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		A662DDF3289E216200B8347E /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		A662DDF4289E216200B8347E /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		A662DDF5289E216200B8347E /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		A684DDD828A772A90061E5E3 /* MigalReminders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MigalReminders.entitlements; path = MigalReminders/MigalReminders.entitlements; sourceTree = "<group>"; };
+		A684DDD928A772A90061E5E3 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -73,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A684DDDA28A772A90061E5E3 /* ExternalAccessory.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-MigalReminders.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +104,7 @@
 		13B07FAE1A68108700A75B9A /* MigalReminders */ = {
 			isa = PBXGroup;
 			children = (
+				A684DDD828A772A90061E5E3 /* MigalReminders.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -113,6 +118,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A684DDD928A772A90061E5E3 /* ExternalAccessory.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-MigalReminders.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-MigalReminders-MigalRemindersTests.a */,
@@ -521,10 +527,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MigalReminders/MigalReminders.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S2JWH344TV;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MigalReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -551,10 +558,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MigalReminders/MigalReminders.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S2JWH344TV;
 				INFOPLIST_FILE = MigalReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

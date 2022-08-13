@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { isIOS } from '../../../../common/helpers/quickFunctions';
 import { spacing } from '../../../../common/utils/theme';
 
 export const profileStyles = StyleSheet.create({
   customstylesHeader: {
     backgroundColor: 'transparent',
+    marginTop: isIOS() ? 0 : 25,
   },
   containerUserInfo: {
     flex: 1,

@@ -6,6 +6,7 @@ import { useProfileSelectors } from '../../../../store/reducers/profile/selector
 import { activateLayoutAnimation } from '../../../common/animations/layaoutAnimation';
 import { useReboundAnimation } from '../../../common/animations/rebound';
 import { IColorListItem } from '../../../common/constants/index';
+import PushNotification from 'react-native-push-notification';
 
 export const useColor = () => {
   // Selectors
@@ -27,13 +28,24 @@ export const useColor = () => {
   });
 
   const configScale = {
-    scale1: { toValue: 1000, duration: 500 },
-    scale2: { toValue: 1500, duration: 100 },
-    scale3: { toValue: 2000, duration: 50 },
+    scale1: { toValue: 500, duration: 500 },
+    scale2: { toValue: 1500, duration: 250 },
+    scale3: { toValue: 5000, duration: 100 },
+  };
+
+  const createChannelForPushNotifications = () => {
+    PushNotification.createChannel(
+      {
+        channelId: 'migal-channel',
+        channelName: 'Migal Channel',
+      },
+      ev => console.log('Migal Chanle created: ', ev),
+    );
   };
 
   const { scaleValue, handleScale } = useReboundAnimation(configScale, () => {
     setShowCompleteIcon(true);
+    createChannelForPushNotifications();
     activateLayoutAnimation({
       duration: 300,
       creationProp: 'scaleXY',

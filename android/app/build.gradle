@@ -256,6 +256,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-push-notification')
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     //noinspection GradleDynamicVersion
