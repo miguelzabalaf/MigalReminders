@@ -8,6 +8,7 @@ import { ButtonCreate } from '../../../common/components/buttonCreate';
 import { hexToRGB } from '../../../common/helpers/quickFunctions';
 import { colors } from '../../../common/utils/theme';
 import { heroRemindersListStyles } from '../../styles/components/heroRemindersList';
+import { HeroReminderItem } from '../heroReminderItem';
 
 export const HeroRemindersList: React.FC = () => {
   const { getColorPreferenceSelector } = useProfileSelectors();
@@ -25,7 +26,7 @@ export const HeroRemindersList: React.FC = () => {
       channelId: 'migal-channel',
       title: 'Hola',
       message: 'Message',
-      date: new Date(Date.now() + 1000),
+      date: new Date(Date.now() + 10000),
     });
   };
 
@@ -62,14 +63,7 @@ export const HeroRemindersList: React.FC = () => {
               activeOpacity={0.9}
               onPress={handleNotification}
               style={containerReminder}>
-              <View
-                style={{
-                  width: 125,
-                  height: 85,
-                  borderRadius: 15,
-                  backgroundColor: 'white',
-                }}
-              />
+              <HeroReminderItem />
             </TouchableOpacity>
           );
         }}

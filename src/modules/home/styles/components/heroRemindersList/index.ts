@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 import { spacing } from '../../../../common/utils/theme';
 
 export const heroRemindersListStyles = StyleSheet.create({
   containerRemindersFlatList: {
-    maxHeight: 85,
+    maxHeight: RFValue(65),
+    marginTop: -spacing.s - spacing.s,
   },
   containerButtonCreate: {
     width: 50,
@@ -20,10 +22,8 @@ export const heroRemindersListStyles = StyleSheet.create({
   },
   containerReminders: {
     flex: 1,
-    paddingVertical: spacing.m,
     justifyContent: 'center',
     position: 'relative',
-    paddingTop: spacing.m + spacing.s + spacing.s,
   },
   containerReminder: {
     marginRight: 15,

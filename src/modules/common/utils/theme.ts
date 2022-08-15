@@ -1,12 +1,13 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export const spacing = {
-  xs: 2,
-  s: 4,
-  m: 16,
-  l: 32,
-  xl: 64,
-  xxl: 128,
+  xxs: RFValue(1),
+  xs: RFValue(2),
+  s: RFValue(4),
+  m: RFValue(16),
+  l: RFValue(32),
+  xl: RFValue(64),
+  xxl: RFValue(128),
 };
 
 export const colors = {
@@ -14,6 +15,7 @@ export const colors = {
   text: '#333333',
   textMuted: '#999999',
   white: '#FFFFFF',
+  whiteLight: 'rgba(255, 255, 255, 0.25)',
   background: '#f8f6f4',
   primary: '#111111',
   primaryLight: 'rgba(11, 11, 11, 0.25)',
@@ -26,6 +28,7 @@ export const colors = {
 };
 
 export const sizes = {
+  xxs: RFValue(10),
   xs: RFValue(12),
   s: RFValue(14),
   m: RFValue(20),

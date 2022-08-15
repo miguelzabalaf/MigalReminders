@@ -70,10 +70,7 @@ export const NicknameInput: React.FC<NicknameInputProps> = ({
             { transform: [{ scale: scaleValue }] },
             inputNameStyles.containerCount,
           ]}>
-          <Text
-            type="text"
-            color={colors.white}
-            customStyle={inputNameStyles.containerCountText}>
+          <Text type="text" customStyle={inputNameStyles.containerCountText}>
             {nickname.length}/{NICKNAME_MAX_LENGHT}
           </Text>
         </Animated.View>

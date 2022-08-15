@@ -17,12 +17,16 @@ interface TextComponentProps extends TextProps {
 }
 
 export const Text: React.FC<PropsWithChildren<TextComponentProps>> = props => {
-  const getStylesByType = textStyles[props.type] ?? textStyles.text;
+  const getStylesByType = { ...textStyles[props.type], color: props.color } ?? {
+    ...textStyles.text,
+    color: props.color,
+  };
   return (
     <TextComponent
+      {...props}
       style={[
-        getStylesByType,
         { color: props.color ?? colors.text },
+        getStylesByType,
         props.customStyle,
       ]}>
       {props.children}

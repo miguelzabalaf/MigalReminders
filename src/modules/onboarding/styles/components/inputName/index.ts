@@ -42,7 +42,7 @@ export const inputNameStyles = StyleSheet.create({
     alignItems: 'center',
   },
   containerCountText: {
-    opacity: 0.75,
+    color: colors.white,
     fontFamily: fonts.bold,
   },
 });
