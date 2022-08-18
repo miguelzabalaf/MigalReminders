@@ -19,3 +19,7 @@ export const activateLayoutAnimation = ({
     LayoutAnimation.create(duration, type, creationProp),
   );
 };
+
+export const activateLayoutSpringAnimation = () => {
+  LayoutAnimation.spring();
+};

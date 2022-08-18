@@ -59,7 +59,7 @@ export const ColorScreen: React.FC = () => {
               data={colorList}
               renderItem={({ item }) => (
                 <TouchableOpacity
-                  activeOpacity={0.9}
+                  activeOpacity={0.75}
                   onPress={ev => {
                     setPositionColor({
                       x: ev.nativeEvent.pageX,

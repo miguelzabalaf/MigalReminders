@@ -9,12 +9,14 @@ import {
 } from 'react-native';
 import { buttonStyles } from '../../styles/components/button';
 import { useReboundAnimation } from '../../animations/rebound/index';
+import { colors } from '../../utils/theme';
 
 type ButtonContentType = 'text' | 'icon';
 
 interface ButtonProps extends TouchableOpacityProps {
   contentType: ButtonContentType;
   customStyle?: StyleProp<ViewStyle>;
+  backgroundColor?: StyleProp<ViewStyle['backgroundColor']>;
 }
 
 export const Button: React.FC<PropsWithChildren<ButtonProps>> = props => {
@@ -26,8 +28,10 @@ export const Button: React.FC<PropsWithChildren<ButtonProps>> = props => {
 
   const { scaleValue, handleScale } = useReboundAnimation(configScale);
 
-  const getContainerStyles: ButtonProps['customStyle'] =
-    props.customStyle ?? buttonStyles.containerButton;
+  const getContainerStyles: ButtonProps['customStyle'] = props.customStyle ?? {
+    ...buttonStyles.containerButton,
+    backgroundColor: props.backgroundColor ?? colors.primary,
+  };
 
   const getDisableStyles: StyleProp<ViewStyle> = {
     opacity: props.disabled ? 0.5 : 1,
@@ -41,7 +45,7 @@ export const Button: React.FC<PropsWithChildren<ButtonProps>> = props => {
         onPressIn={() => {
           handleScale();
         }}
-        activeOpacity={0.9}
+        activeOpacity={0.75}
         {...props}>
         {props.contentType === 'text' ? (
           <Text style={buttonStyles.text}>{props.children}</Text>

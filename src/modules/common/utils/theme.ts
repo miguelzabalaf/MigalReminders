@@ -12,11 +12,13 @@ export const spacing = {
 
 export const colors = {
   title: '#1D1C1D',
-  text: '#333333',
-  textMuted: '#999999',
+  text: '#6e6d7a',
+  textMuted: '#9e9ea7',
   white: '#FFFFFF',
   whiteLight: 'rgba(255, 255, 255, 0.25)',
+  grayLight: 'rgba(200, 200, 200, 0.25)',
   background: '#f8f6f4',
+  colorInputs: '#fdFdFd',
   primary: '#111111',
   primaryLight: 'rgba(11, 11, 11, 0.25)',
   color1: '#EA5A4B',
@@ -25,6 +27,9 @@ export const colors = {
   color4: '#9447C3',
   color5: '#124E67',
   color6: '#2D2D2D',
+  success: '#00C853',
+  warning: '#FFA555',
+  alert: '#FF3D00',
 };
 
 export const sizes = {

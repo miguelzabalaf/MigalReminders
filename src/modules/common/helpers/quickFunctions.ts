@@ -15,3 +15,7 @@ export const hexToRGB = (hex: string, alpha?: number) => {
     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
   }
 };
+
+export const sleep = (ms: number) => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};

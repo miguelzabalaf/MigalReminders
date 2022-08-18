@@ -4,8 +4,9 @@ import { colors } from '../utils/theme';
 export const COMMON_RESET_REDUX_STORE_DATA = 'common/resetReduxStoreData';
 
 // Stacks
-export const ONBOARDING_STACK = 'onboardingStack';
-export const APP_STACK = 'appStack';
+export const ONBOARDING_STACK = 'OnboardingStack';
+export const APP_STACK = 'AppStack';
+export const HOME_STACK = 'HomeStack';
 
 // Routes
 export const ONBOARDING_SCREEN = 'OnboardingScreen';
@@ -13,6 +14,10 @@ export const HELLO_SCREEN = 'HelloScreen';
 export const COLOR_SCREEN = 'ColorScreen';
 export const HOME_SCREEN = 'HomeScreen';
 export const PROFILE_SCREEN = 'ProfileScreen';
+export const REMINDER_FORM_MODAL = 'ReminderFormModal';
+
+// Sheets
+export const REMINDER_FORM_SHEET = 'ReminderFormSheet';
 
 // Data
 export interface IColorListItem {

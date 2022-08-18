@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { hexToRGB } from '../../../../common/helpers/quickFunctions';
 import { fonts, sizes, spacing, colors } from '../../../../common/utils/theme';
 
 export const inputNameStyles = StyleSheet.create({
@@ -10,15 +11,8 @@ export const inputNameStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: spacing.m,
-    backgroundColor: colors.white,
     shadowColor: colors.textMuted,
-    shadowOffset: {
-      width: 0,
-      height: 5,
-    },
-    shadowOpacity: 0.05,
-    shadowRadius: 5,
-    elevation: 5,
+    backgroundColor: hexToRGB(colors.primary, 0.025),
   },
   textInput: {
     zIndex: 1,

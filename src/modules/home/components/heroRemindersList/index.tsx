@@ -1,7 +1,8 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { FlatList, TouchableOpacity, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import PushNotification from 'react-native-push-notification';
+// import PushNotification from 'react-native-push-notification';
 import { useSelector } from 'react-redux';
 import { useProfileSelectors } from '../../../../store/reducers/profile/selectors';
 import { ButtonCreate } from '../../../common/components/buttonCreate';
@@ -9,6 +10,7 @@ import { hexToRGB } from '../../../common/helpers/quickFunctions';
 import { colors } from '../../../common/utils/theme';
 import { heroRemindersListStyles } from '../../styles/components/heroRemindersList';
 import { HeroReminderItem } from '../heroReminderItem';
+import { REMINDER_FORM_MODAL } from '../../../common/constants/index';
 
 export const HeroRemindersList: React.FC = () => {
   const { getColorPreferenceSelector } = useProfileSelectors();
@@ -21,12 +23,17 @@ export const HeroRemindersList: React.FC = () => {
     containerRemindersGradient,
   } = heroRemindersListStyles;
 
-  const handleNotification = () => {
-    PushNotification.localNotificationSchedule({
-      channelId: 'migal-channel',
-      title: 'Hola',
-      message: 'Message',
-      date: new Date(Date.now() + 10000),
+  const { navigate: navigateTo } = useNavigation();
+
+  const handleOpenReminderForm = data => {
+    // PushNotification.localNotificationSchedule({
+    //   channelId: 'migal-channel',
+    //   title: 'Hola',
+    //   message: 'Message',
+    //   date: new Date(Date.now() + 1000),
+    // });
+    navigateTo(REMINDER_FORM_MODAL, {
+      editMode: true,
     });
   };
 
@@ -51,8 +58,8 @@ export const HeroRemindersList: React.FC = () => {
           if (item?.buttonToCreate) {
             return (
               <TouchableOpacity
-                onPress={handleNotification}
-                activeOpacity={0.9}
+                onPress={() => handleOpenReminderForm({ editMode: false })}
+                activeOpacity={0.75}
                 style={containerButtonCreate}>
                 <ButtonCreate />
               </TouchableOpacity>
@@ -60,8 +67,8 @@ export const HeroRemindersList: React.FC = () => {
           }
           return (
             <TouchableOpacity
-              activeOpacity={0.9}
-              onPress={handleNotification}
+              activeOpacity={0.75}
+              onPress={() => handleOpenReminderForm({ editMode: true })}
               style={containerReminder}>
               <HeroReminderItem />
             </TouchableOpacity>
