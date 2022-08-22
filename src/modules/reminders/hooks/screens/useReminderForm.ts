@@ -7,6 +7,7 @@ import { AppState, Keyboard } from 'react-native';
 import moment from 'moment';
 import { checkPermissionsNotifications } from '../../../common/helpers/permissions';
 import { activateLayoutAnimation } from '../../../common/animations/layaoutAnimation/index';
+import { useNavigation } from '@react-navigation/native';
 
 const keyboardShowInitialState = false;
 
@@ -14,7 +15,13 @@ const reminderDateInitialState = '';
 
 const showNotifInitialstate = false;
 
+interface IReminderForm {
+  titleReminder: string;
+}
+
 export const useReminderForm = () => {
+  const { goBack } = useNavigation();
+
   const [keyboardShow, setKeyboardShow] = useState(keyboardShowInitialState);
 
   const [reminderDate, setReminderDate] = useState(reminderDateInitialState);
@@ -24,7 +31,7 @@ export const useReminderForm = () => {
   const [haveNotifPermissions, setHaveNotifPermissions] = useState(true);
 
   const reminderValidator = Yup.object().shape({
-    titleReminder: Yup.string().required('Reminder title es requerido'),
+    titleReminder: Yup.string().required('This field is required'),
   });
 
   const {
@@ -32,12 +39,13 @@ export const useReminderForm = () => {
     handleSubmit,
     reset: resetForm,
     formState: { errors, isValid },
-  } = useForm({
+  } = useForm<IReminderForm>({
     defaultValues: {
       titleReminder: '',
     },
     resolver: yupResolver(reminderValidator),
     mode: 'all',
+    delayError: 500,
   });
 
   const handleChangeKeyboardShow = (value: boolean) => {
@@ -99,14 +107,15 @@ export const useReminderForm = () => {
     Keyboard.dismiss();
   };
 
-  const onSubmitReminder = data => {
+  const onSubmitReminder = (data: IReminderForm) => {
     const formData = {
       title: data.titleReminder,
-      date: reminderDate,
+      date: new Date(reminderDate),
       showNotification: showNotif,
       createdAt: new Date().getTime(),
     };
     console.log('formData: ', formData);
+    goBack();
   };
 
   const isValidReminder = isValid && reminderDate;

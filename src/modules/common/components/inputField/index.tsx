@@ -6,13 +6,13 @@ import {
   TouchableOpacity,
   TextInputProps,
 } from 'react-native';
-import { Controller } from 'react-hook-form';
+import { Controller, FieldErrorsImpl } from 'react-hook-form';
 import { inputFieldStyles } from '../../styles/components/inputField';
 
 interface InputFieldProps extends TextInputProps {
   label: string;
   name: string;
-  errors: Object;
+  errors: FieldErrorsImpl;
   icon?: ReactNode;
   control: any;
   onPressIcon?: () => void;
@@ -27,7 +27,7 @@ export const InputField: React.FC<InputFieldProps> = props => {
     inputContainer,
     inputLabel,
     inputFieldContent,
-    // inputErrorMessage,
+    inputErrorMessage,
   } = inputFieldStyles;
   return (
     <View style={inputContainer}>
@@ -56,11 +56,11 @@ export const InputField: React.FC<InputFieldProps> = props => {
           )}
         />
       </View>
-      {/* {errors && errors[name] && (
-        <Text style={formStyles.inputErrorMessage}>
-          {errors[name]?.message}
+      {props.errors[props.name] && (
+        <Text style={inputErrorMessage}>
+          {props.errors[props.name]?.message}
         </Text>
-      )} */}
+      )}
     </View>
   );
 };

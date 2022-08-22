@@ -5,12 +5,17 @@ import {
   IOnboardingState,
   onboardingReducer as onboarding,
 } from './onboarding';
+import {
+  remindersReducer as reminders,
+  IRemindersState,
+} from './reminders/index';
 import { profileReducer as profile } from './profile';
-import { IProfileState } from './profile/index';
+import { IProfileState } from './profile';
 
 export interface IReduxStore {
   onboarding: IOnboardingState;
   profile: IProfileState;
+  reminders: IRemindersState;
 }
 
 export const actResetStoreData = (dispatch: Dispatch<AnyAction>) => {
@@ -23,5 +28,6 @@ export const useReducers = () => {
   return combineReducers({
     onboarding,
     profile,
+    reminders,
   });
 };

@@ -1,6 +1,6 @@
 import { COMMON_RESET_REDUX_STORE_DATA } from '../../../modules/common/constants';
 import {
-  actionProps,
+  TActionProps,
   createReducer,
 } from '../../../modules/common/helpers/createReducer';
 import {
@@ -21,7 +21,7 @@ const onboardingInitialState: IOnboardingState = {
 const onboardingHandler = {
   [ONBOARDING_SET_FIRST_SESSION_DATE](
     state: IOnboardingState,
-    action: actionProps,
+    action: TActionProps,
   ) {
     const firstSessionDate = action.payload;
     return {
@@ -31,7 +31,7 @@ const onboardingHandler = {
   },
   [ONBOARDING_CHANGE_ONBOARDING_COMPLETE](
     state: IOnboardingState,
-    action: actionProps,
+    action: TActionProps,
   ) {
     const onboardingCompleate = action.payload;
     return {

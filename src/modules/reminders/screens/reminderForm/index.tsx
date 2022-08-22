@@ -121,6 +121,7 @@ export const ReminderForm: React.FC<ReminderFormProps> = ({ route }) => {
                   borderColor: colors.whiteLight,
                 }}
                 minimumDate={minimunDate}
+                minuteInterval={1}
                 onSelectedChange={date => setReminderDate(date)}
               />
             </View>

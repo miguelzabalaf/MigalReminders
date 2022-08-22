@@ -2,6 +2,9 @@ import { colors } from '../utils/theme';
 
 // Types
 export const COMMON_RESET_REDUX_STORE_DATA = 'common/resetReduxStoreData';
+export type CommonActionProp = {
+  type: 'common/resetReduxStoreData';
+};
 
 // Stacks
 export const ONBOARDING_STACK = 'OnboardingStack';

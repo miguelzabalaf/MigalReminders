@@ -3,7 +3,7 @@ import {
   IColorListItem,
 } from '../../../modules/common/constants';
 import {
-  actionProps,
+  TActionProps,
   createReducer,
 } from '../../../modules/common/helpers/createReducer';
 import {
@@ -22,14 +22,14 @@ const profileInitialState: IProfileState = {
 };
 
 const profileHandler = {
-  [PROFILE_SET_NICKNAME](state: IProfileState, action: actionProps) {
+  [PROFILE_SET_NICKNAME](state: IProfileState, action: TActionProps) {
     const nickname = action.payload;
     return {
       ...state,
       nickname,
     };
   },
-  [PROFILE_SET_COLOR_PREFERENCE](state: IColorListItem, action: actionProps) {
+  [PROFILE_SET_COLOR_PREFERENCE](state: IColorListItem, action: TActionProps) {
     const colorPreference = action.payload;
     return {
       ...state,
